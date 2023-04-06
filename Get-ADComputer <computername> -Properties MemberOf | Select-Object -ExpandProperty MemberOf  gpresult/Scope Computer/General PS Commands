@@ -1,0 +1,10 @@
+##Install RSAT
+Install-WindowsFeature RSAT-AD-PowerShell
+
+
+##Finding a server's "Member Of" groups
+Get-ADComputer <computername> -Properties MemberOf | Select-Object -ExpandProperty MemberOf
+
+  
+gpresult /Scope Computer /v
+
